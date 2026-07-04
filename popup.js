@@ -581,7 +581,7 @@ function instructionsForContext(context) {
       modeLabel: 'Profile',
       title: 'Import profile details',
       summary:
-        'This will copy the Instagram username, display name, bio, and avatar into the active resource form.',
+        'This will copy the Instagram username, display name, bio, and avatar into the active LocalScene profile form.',
       steps: [
         'Paste an Instagram @handle or profile URL here, or open the profile in Instagram.',
         'Make sure you are logged in if Instagram asks for it.',
@@ -724,8 +724,8 @@ function labelForContext(context) {
     'gig-flyer-post': 'Gig show flyer',
     'gig-photo-post': 'Gig photo import',
     'resource-gallery-post': 'Resource gallery photo',
-    'resource-photo-post': 'Resource photo import',
-    'resource-profile': 'Resource profile import',
+    'resource-photo-post': 'Profile photo import',
+    'resource-profile': 'Profile details import',
     'resource-featured-post': 'Resource featured post',
   };
   return labels[context] ?? context;
@@ -736,8 +736,8 @@ function targetLabelForContext(context, title, targetName) {
     'gig-flyer-post': 'Target: gig flyer photo on LocalScene',
     'gig-photo-post': 'Target: open gig photo uploader',
     'resource-gallery-post': 'Target: open resource gallery uploader',
-    'resource-photo-post': 'Target: resource profile photo field',
-    'resource-profile': 'Target: resource profile fields and avatar',
+    'resource-photo-post': 'Target: profile photo field',
+    'resource-profile': 'Target: profile fields and avatar',
     'resource-featured-post': 'Target: resource featured Instagram embeds',
   };
   const target = labels[context] ?? `Target: ${context}`;
