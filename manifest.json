@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "LocalScene Instagram Grabber",
+  "version": "0.1.12",
+  "description": "Grab Instagram photo posts and profiles into the open LocalScene form using your own browser session.",
+  "icons": {
+    "192": "logo192.png",
+    "512": "logo512.png"
+  },
+  "action": {
+    "default_title": "LocalScene Instagram Grabber",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "192": "logo192.png",
+      "512": "logo512.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://localscene.fm/*",
+    "https://www.instagram.com/*",
+    "https://*.cdninstagram.com/*",
+    "https://*.fbcdn.net/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://localscene.fm/*"
+      ],
+      "js": [
+        "localscene-content.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://www.instagram.com/*"
+      ],
+      "js": [
+        "instagram-content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

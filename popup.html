@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LocalScene Instagram Grabber</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="flow-mark" aria-hidden="true">
+          <span class="ig-icon"><span></span></span>
+          <span class="flow-arrow">&rarr;</span>
+          <span class="localscene-icon-wrap">
+            <img src="localscene-icon.svg" alt="" />
+          </span>
+        </div>
+        <div class="header-copy">
+          <p class="brand-name">localscene.fm</p>
+          <h1>Instagram Grabber</h1>
+          <p id="context" hidden>Finding LocalScene context...</p>
+        </div>
+      </header>
+
+      <section class="state-grid" aria-label="Grabber state">
+        <div class="state-card ready-card">
+          <span class="state-label">Ready to grab</span>
+          <strong id="ready-state">Checking...</strong>
+        </div>
+        <div class="state-flow" aria-label="LocalScene target detection">
+          <span id="target-detected-badge" class="target-detected-badge">NG</span>
+          <svg
+            class="state-arrow"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            width="26"
+            height="26"
+          >
+            <path
+              d="M4 12h14m-5-5 5 5-5 5"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.4"
+            />
+          </svg>
+        </div>
+        <div class="state-card target-card">
+          <span class="state-label">Grabbing for</span>
+          <strong id="target-state">Unknown target</strong>
+          <span id="purpose-state">Choose a LocalScene field</span>
+        </div>
+      </section>
+
+      <section class="actions">
+        <label id="instagram-url-label" for="instagram-url">
+          Instagram photo post or profile URL
+        </label>
+        <input
+          id="instagram-url"
+          type="text"
+          placeholder="https://www.instagram.com/p/..."
+        />
+        <button id="grab-active" type="button">
+          <span id="grab-spinner" class="spinner" hidden></span>
+          <span id="grab-active-label">Scrape image to LocalScene</span>
+        </button>
+        <button id="grab-current" class="tertiary" type="button">
+          Use current Instagram tab
+        </button>
+      </section>
+
+      <details id="history-panel" class="panel accordion-panel history-panel">
+        <summary>
+          <svg
+            class="accordion-icon history-icon"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+          >
+            <path
+              d="M3 12a9 9 0 1 0 3-6.7M3 4.5v5h5"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <path
+              d="M12 7v5l3 2"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+          <span>Recent grabs</span>
+          <svg
+            class="accordion-chevron"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+          >
+            <path
+              d="m8 10 4 4 4-4"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </summary>
+        <div class="history-head">
+          <p>Reuse a recent Instagram link.</p>
+          <button id="history-clear" class="link-button" type="button">Clear</button>
+        </div>
+        <ul id="history-list" class="history-list"></ul>
+        <p id="history-empty" class="empty-history">No grabs yet.</p>
+      </details>
+
+      <p id="status" class="status" role="status" hidden></p>
+
+      <details class="panel accordion-panel guide">
+        <summary>
+          <svg
+            class="accordion-icon"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="9"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <path
+              d="M9.7 9a2.4 2.4 0 0 1 4.6.9c0 1.8-2.3 2-2.3 3.6"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <path
+              d="M12 17h.01"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="3"
+            />
+          </svg>
+          <span>Help</span>
+          <svg
+            class="accordion-chevron"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+          >
+            <path
+              d="m8 10 4 4 4-4"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </summary>
+        <div class="guide-head">
+          <span id="mode-pill" class="pill">Checking</span>
+          <h2 id="instruction-title">Choose a LocalScene import field</h2>
+        </div>
+        <p id="instruction-summary">
+          Open a LocalScene form or modal that accepts Instagram data.
+        </p>
+        <ol id="instruction-steps"></ol>
+        <p id="instruction-tip" class="tip"></p>
+      </details>
+
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
