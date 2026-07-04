@@ -1,15 +1,13 @@
 # LocalScene Instagram Grabber
 
-LocalScene Instagram Grabber is a Chrome extension for LocalScene contributors.
+LocalScene Instagram Grabber is a browser extension for LocalScene contributors.
 It helps move selected Instagram profile details and public photo-post images
 into an open LocalScene form using your own browser session.
 
 This repository is provided for temporary manual installation while the Chrome
-Web Store listing is under review. Once the Chrome listing is approved,
-LocalScene will point Chrome users to the store install instead.
-
-Firefox is ready now:
-https://addons.mozilla.org/en-US/firefox/addon/localscene-instagram-grabber/
+Web Store and Firefox Add-ons listings are under review. Once the store listings
+are approved, LocalScene will point users to the normal browser store installs
+instead.
 
 ## Install in Chrome
 
@@ -22,6 +20,20 @@ https://addons.mozilla.org/en-US/firefox/addon/localscene-instagram-grabber/
 7. Click **Load unpacked**.
 8. Select the unzipped `localscene-instagram-grabber-main` folder.
 9. Pin the LocalScene Instagram Grabber extension from Chrome's extensions menu.
+
+## Install Temporarily in Firefox
+
+Firefox support is packaged here for contributor testing while the Firefox
+Add-ons listing is under review. Temporary Firefox add-ons are removed when
+Firefox restarts, so you may need to repeat these steps.
+
+1. Open `localscene-instagram-grabber-firefox.zip` in this repository.
+2. Click the download button for the raw file.
+3. Unzip the downloaded file.
+4. Open Firefox and go to `about:debugging#/runtime/this-firefox`.
+5. Click **Load Temporary Add-on**.
+6. Select `manifest.json` inside the unzipped Firefox package folder.
+7. Pin or open LocalScene Instagram Grabber from Firefox's extensions menu.
 
 ## Use the Grabber
 
