@@ -5,7 +5,11 @@ It helps move selected Instagram profile details and public photo-post images
 into an open LocalScene form using your own browser session.
 
 This repository is provided for temporary manual installation while the Chrome
-Web Store listing is under review.
+Web Store listing is under review. Once the Chrome listing is approved,
+LocalScene will point Chrome users to the store install instead.
+
+Firefox is ready now:
+https://addons.mozilla.org/en-US/firefox/addon/localscene-instagram-grabber/
 
 ## Install in Chrome
 
