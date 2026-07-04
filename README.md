@@ -1,5 +1,9 @@
 # LocalScene Instagram Grabber
 
+<p>
+  <img src="./media/localscene-logo.svg" alt="LocalScene.fm" />
+</p>
+
 LocalScene Instagram Grabber is a browser extension for LocalScene contributors.
 It helps move selected Instagram profile details and public photo-post images
 into an open LocalScene form using your own browser session.
@@ -8,6 +12,14 @@ This repository is provided for temporary manual installation while the Chrome
 Web Store and Firefox Add-ons listings are under review. Once the store listings
 are approved, LocalScene will point users to the normal browser store installs
 instead.
+
+## Preview
+
+[Watch the desktop grabber demo recording](./media/localscene-instagram-grabber-demo.mov)
+
+![LocalScene form with an Instagram grabber target detected](./media/localscene-grabber-local-target.png)
+
+![LocalScene Instagram Grabber extension popup](./media/localscene-grabber-popup.png)
 
 ## Install in Chrome
 
